@@ -1,0 +1,47 @@
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  background-color: #e1e3ff58;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  width: 90%;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .logo img {
+  height: 40px;
+  width: 40px;
+}
+
+nav .logo span {
+  color: #310b5c;
+  font-size: 20px;
+  margin-left: 20px;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 770px) {
+  nav span {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

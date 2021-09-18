@@ -1,0 +1,346 @@
+:root {
+  --svgdasharray: 99999999;
+  --svgdashoffset: 99999999;
+}
+
+.razorpay-payment-button a {
+  background-color: #7877EE !important;
+  border-radius: 20px 3px 20px 3px !important;
+  font-size: 12px !important;
+  height: unset !important;
+  padding: 10px 40px !important;
+  border: none !important;
+  font-family: var(--secondary-text) !important;
+  font-style: normal !important;
+  -webkit-box-shadow: 0px 3px 20px #8482f3d2 !important;
+          box-shadow: 0px 3px 20px #8482f3d2 !important;
+}
+
+.razorpay-payment-button a svg {
+  display: none !important;
+}
+
+.razorpay-payment-button a .PaymentButton-contents {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.razorpay-payment-button a .PaymentButton-contents .PaymentButton-text {
+  display: block;
+  min-height: unset !important;
+  line-height: unset !important;
+  font-size: 12px !important;
+}
+
+.razorpay-payment-button a .PaymentButton-contents .PaymentButton-securedBy {
+  display: none !important;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 4rem;
+}
+
+.heroText {
+  font-family: var(--primary-text);
+  font-weight: 700;
+  font-size: 2.7rem;
+  padding: 0px 30px;
+  padding-right: 50px;
+  color: #1e1d50;
+}
+
+.heroText .orange {
+  cursor: pointer;
+  color: #F79149;
+  position: relative;
+  font-family: var(--secondary-text);
+}
+
+.heroText .orange::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(1.5);
+          transform: scaleX(1.5);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  height: 10px;
+  top: 90%;
+  z-index: -1;
+  left: 0px;
+  background: url("../images/tick.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.heroText .orange:hover::after {
+  content: attr(data-message);
+  position: absolute;
+  top: -50px;
+  min-width: 25vw;
+  left: 0px;
+  text-align: center;
+  font-family: var(--secondary-text);
+  padding: 10px 15px;
+  background-color: #ffd3d391;
+  color: #ff5f5f;
+  border: 1px solid #ff5f5f;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.heroText .secondary-text {
+  font-family: var(--secondary-text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 8px auto;
+}
+
+.heroText .blue {
+  color: #514ffc;
+}
+
+.heroText .donateBtn {
+  background-color: #6e6bf2;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-family: var(--secondary-text);
+  font-weight: 600;
+  -webkit-box-shadow: 0px 3px 20px #8482f3d2;
+          box-shadow: 0px 3px 20px #8482f3d2;
+  cursor: pointer;
+}
+
+#formBtn {
+  margin-top: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.stats {
+  background-color: #7877EE;
+  padding: 4rem 1rem;
+  min-width: 25%;
+  border-radius: 10px;
+  color: white;
+  -webkit-box-shadow: 10px 10px 0px #DCDCFF, 20px 20px 0px #E7E7FF;
+          box-shadow: 10px 10px 0px #DCDCFF, 20px 20px 0px #E7E7FF;
+  font-family: var(--secondary-text);
+  font-weight: 600;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: tilt 1s ease;
+          animation: tilt 1s ease;
+  text-align: center;
+}
+
+.stats .progressBar {
+  width: 60%;
+  margin: 10px auto;
+  position: relative;
+}
+
+.stats .progressBar .numbers {
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.stats .progressBar svg {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.stats .progressBar svg circle:last-child {
+  stroke: white;
+  -webkit-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  stroke-dasharray: var(--svgdasharray);
+  stroke-dashoffset: var(--svgdasharray);
+  stroke-linecap: round;
+  -webkit-animation: progress cubic-bezier(0.175, 0.885, 0.32, 1.175) 0.5s 2s forwards;
+          animation: progress cubic-bezier(0.175, 0.885, 0.32, 1.175) 0.5s 2s forwards;
+}
+
+.stats .progressBar svg circle:first-child {
+  stroke: #6867DD;
+  stroke-linecap: round;
+}
+
+@-webkit-keyframes progress {
+  to {
+    stroke-dashoffset: var(--svgdashoffset);
+  }
+}
+
+@keyframes progress {
+  to {
+    stroke-dashoffset: var(--svgdashoffset);
+  }
+}
+
+@-webkit-keyframes tilt {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0deg);
+            transform: scale(1) rotateZ(0deg);
+  }
+  30% {
+    -webkit-transform: scale(0.95) rotateZ(4deg);
+            transform: scale(0.95) rotateZ(4deg);
+  }
+  65% {
+    -webkit-transform: scale(1.05) rotateZ(-4deg);
+            transform: scale(1.05) rotateZ(-4deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(0deg);
+            transform: scale(1) rotateZ(0deg);
+  }
+}
+
+@keyframes tilt {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0deg);
+            transform: scale(1) rotateZ(0deg);
+  }
+  30% {
+    -webkit-transform: scale(0.95) rotateZ(4deg);
+            transform: scale(0.95) rotateZ(4deg);
+  }
+  65% {
+    -webkit-transform: scale(1.05) rotateZ(-4deg);
+            transform: scale(1.05) rotateZ(-4deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(0deg);
+            transform: scale(1) rotateZ(0deg);
+  }
+}
+
+.greetText {
+  font-family: var(--primary-text);
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  font-size: 20px;
+  color: #5b5b61;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 770px) {
+  body {
+    background-image: none;
+    background-color: #fafaff;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+    -webkit-user-select: none;
+    -webkit-focus-ring-color: transparent;
+  }
+  section {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section .heroText {
+    padding: 10px 20px;
+    font-size: 2rem;
+    margin: 30px auto;
+  }
+  section .heroText .orange {
+    font-size: 1.5rem;
+  }
+  section .heroText .orange::before {
+    left: 0;
+  }
+  section .heroText .orange:hover::after {
+    left: 0;
+    width: 75vw;
+  }
+  section .heroText .secondary-text {
+    font-size: 0.7rem;
+  }
+  section .heroText .donateBtn {
+    font-size: 0.7rem;
+    outline: none;
+  }
+  section .stats {
+    width: 90%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  @-webkit-keyframes tilt {
+    0% {
+      -webkit-transform: scale(0.8) rotateZ(0deg);
+              transform: scale(0.8) rotateZ(0deg);
+    }
+    30% {
+      -webkit-transform: scale(0.6) rotateZ(4deg);
+              transform: scale(0.6) rotateZ(4deg);
+    }
+    65% {
+      -webkit-transform: scale(0.9) rotateZ(-4deg);
+              transform: scale(0.9) rotateZ(-4deg);
+    }
+    100% {
+      -webkit-transform: scale(0.8) rotateZ(0deg);
+              transform: scale(0.8) rotateZ(0deg);
+    }
+  }
+  @keyframes tilt {
+    0% {
+      -webkit-transform: scale(0.8) rotateZ(0deg);
+              transform: scale(0.8) rotateZ(0deg);
+    }
+    30% {
+      -webkit-transform: scale(0.6) rotateZ(4deg);
+              transform: scale(0.6) rotateZ(4deg);
+    }
+    65% {
+      -webkit-transform: scale(0.9) rotateZ(-4deg);
+              transform: scale(0.9) rotateZ(-4deg);
+    }
+    100% {
+      -webkit-transform: scale(0.8) rotateZ(0deg);
+              transform: scale(0.8) rotateZ(0deg);
+    }
+  }
+  .greetText {
+    display: none;
+  }
+}
+/*# sourceMappingURL=LandingPage.css.map */
